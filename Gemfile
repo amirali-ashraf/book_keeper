@@ -36,12 +36,22 @@ gem "bootsnap", require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem "rack-cors"
 
+# authentication and authorization
+gem 'devise'
+gem 'devise-jwt'
+gem 'rack-cors'
+
+# A Ruby Library for dealing with money and currency conversion.
+gem 'money'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
 
 group :development do
+  gem 'rubocop', require: false
+  gem 'solargraph'
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
